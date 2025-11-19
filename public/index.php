@@ -13,7 +13,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="/workspaces/PI2/public/img/Captura de tela 2025-11-18 212647.png" alt="" width="32" height="32">
-            Vai corinthians!!
+            Vai são paulo!!
         </a>
     </div>
 </nav>
