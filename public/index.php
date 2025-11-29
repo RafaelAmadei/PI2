@@ -1,24 +1,70 @@
+<?php
+// login.php
+$mensagem = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    
+    // Simulação simples de validação
+    if (!empty($email) && !empty($senha)) {
+        $mensagem = "Tentativa de login recebida!";
+    } else {
+        $mensagem = "Por favor, preencha todos os campos.";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link href="/css/default.css" rel="stylesheet" />
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./css/default.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UniFio Achados e Perdidos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="/workspaces/PI2/public/img/Captura de tela 2025-11-18 212647.png" alt="" width="32" height="32">
-            Vai são paulo!!
-        </a>
-    </div>
-</nav>
+    <header class="header-bar">
+        <div class="logo-area">
+            Uni<span style="color:#1A4BCB">Fio</span> <small style="font-size:0.5em; color:black">Achados e Perdidos</small>
+        </div>
+    </header>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <div class="login-container">
+        <div class="login-overlay"></div>
+        
+        <div class="login-card">
+            <form method="POST" action="login.php">
+                
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="E-mail Institucional" required>
+                    
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="senha" placeholder="Senha" required>
+                   
+                </div>
+
+                
+
+                <button type="submit" class="btn-orange">ENTRAR</button>
+
+                <?php if($mensagem): ?>
+                    <p style="color: white; margin-top:10px; font-size:0.8rem;"><?php echo $mensagem; ?></p>
+                <?php endif; ?>
+
+                <div class="signup-link">
+                    Ainda não tem uma conta? <a href="cadastro.php" style="color: #F09D2D; font-weight:bold;">Cadastre-se.</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+      
+    </footer>
+
 </body>
 </html>

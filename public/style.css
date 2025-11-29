@@ -1,0 +1,228 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary-orange: #F09D2D;
+    --primary-blue: #1A4BCB;
+    --dark-footer: #222222;
+    --light-bg: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header-bar {
+    background-color: var(--primary-orange);
+    padding: 15px 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-area {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1.5rem; /* Simulação do Logo */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--dark-footer);
+    padding: 20px 40px;
+    margin-top: auto;
+}
+
+.terms-btn {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    color: var(--primary-blue);
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --- LOGIN PAGE SPECIFIC --- */
+.login-container {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-overlay {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(255,255,255,0.1); /* Leve tint se necessário */
+}
+
+.login-card {
+    background-color: rgba(26, 75, 203, 0.95); /* Azul Translucido */
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    z-index: 2;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-orange:hover {
+    background-color: #d68515;
+}
+
+.forgot-pass {
+    display: block;
+    text-align: right;
+    color: #333;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link {
+    display: block;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --- REGISTER PAGE SPECIFIC --- */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+}
+
+.profile-pic-container {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-blue);
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-upload {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.form-section {
+    flex: 2;
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #999;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-blue {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
