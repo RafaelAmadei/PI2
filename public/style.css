@@ -1,4 +1,3 @@
-/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 :root {
@@ -22,7 +21,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header Styles */
 .header-bar {
     background-color: var(--primary-orange);
     padding: 15px 40px;
@@ -38,10 +36,9 @@ body {
     display: inline-block;
     font-weight: bold;
     color: var(--primary-blue);
-    font-size: 1.5rem; /* Simulação do Logo */
+    font-size: 1.5rem;
 }
 
-/* Footer Styles */
 footer {
     background-color: var(--dark-footer);
     padding: 20px 40px;
@@ -60,7 +57,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- LOGIN PAGE SPECIFIC --- */
 .login-container {
     flex: 1;
     background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
@@ -73,11 +69,11 @@ footer {
 .login-overlay {
     position: absolute;
     top:0; left:0; right:0; bottom:0;
-    background: rgba(255,255,255,0.1); /* Leve tint se necessário */
+    background: rgba(255,255,255,0.1);
 }
 
 .login-card {
-    background-color: rgba(26, 75, 203, 0.95); /* Azul Translucido */
+    background-color: rgba(26, 75, 203, 0.95);
     padding: 40px;
     border-radius: 15px;
     width: 400px;
@@ -142,7 +138,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- REGISTER PAGE SPECIFIC --- */
 .register-wrapper {
     display: flex;
     justify-content: center;
