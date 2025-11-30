@@ -1,12 +1,10 @@
 <?php
-// login.php
 $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     
-    // Simulação simples de validação
     if (!empty($email) && !empty($senha)) {
         $mensagem = "Tentativa de login recebida!";
     } else {
